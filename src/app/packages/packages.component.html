@@ -1,0 +1,53 @@
+<div class="container">
+    <!-- Packages Header -->
+    <div class="row">
+      <div class="col-12">
+        <a class="d-block mb-3" href="#" style="color: #000000; font-size: 18px;">
+          <i class="fas fa-arrow-left"></i> Packages
+        </a>
+      </div>
+    </div>
+  
+    <!-- Swipeable Cards Container -->
+    <section class="feature-card" role="region" aria-labelledby="feature-heading">
+        <div class="feature-content">
+          <header class="feature-header">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b9826141559b75d5e4fca74dffe14ac60d98839cace25601780d6b44675eef4?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+              class="logo"
+              alt="Digital Card Logo"
+            />
+            <h1 id="feature-heading" class="plan-type">Free</h1>
+          </header>
+          <ul class="feature-list" role="list">
+            <li class="feature-item" *ngFor="let feature of features" role="listitem">
+              <img
+                loading="lazy"
+                [src]="feature.icon"
+                class="feature-icon"
+                alt=""
+              />
+              <p class="feature-description">{{ feature.description }}</p>
+            </li>
+          </ul>
+          <button 
+            class="continue-button" 
+            (click)="onContinue()"
+            aria-label="Continue with free plan">
+            Continue
+          </button>
+        </div>
+      </section>
+  
+    <!-- Swipe Instruction -->
+    <!-- <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="swipe-instruction">
+          <img alt="Swipe Icon" height="30" src="https://storage.googleapis.com/a1aa/image/Jad0ARuQIYoUH9FErCbciplVDI0fDXl5WoVZSu5VDkHlLu9JA.jpg" width="30"/>
+          <div>Swipe left or right to check different packages</div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  

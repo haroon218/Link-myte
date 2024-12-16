@@ -1,0 +1,22 @@
+:host {
+    display: contents;
+  }
+  .splash-container {
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 400px 79px;
+  }
+  .logo-image {
+    aspect-ratio: 3.98;
+    object-fit: contain;
+    object-position: center;
+    width: 207px;
+    max-width: 100%;
+  }

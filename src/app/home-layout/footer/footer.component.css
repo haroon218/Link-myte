@@ -1,0 +1,45 @@
+.navigation-container {
+    max-width: 351px;
+    margin: 0 auto;
+  }
+
+  .navigation-list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navigation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(34, 34, 34, 0.4);
+    font: 600 10px/1 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .navigation-item:focus {
+    outline: 2px solid rgba(94, 13, 211, 0.5);
+    border-radius: 4px;
+  }
+
+  .navigation-item.active {
+    color: rgba(94, 13, 211, 1);
+  }
+
+  .navigation-icon {
+    width: 18px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .navigation-label {
+    margin-top: 4px;
+    white-space: nowrap;
+    text-align: center;
+  }

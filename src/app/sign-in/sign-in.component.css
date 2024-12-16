@@ -1,0 +1,206 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .login-screen {
+    background-color: #f1f1f1;
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 15px 20px 71px;
+  }
+
+  .status-bar {
+    display: flex;
+    margin-left: 19px;
+    width: 100%;
+    max-width: 328px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .time {
+    color: #000;
+    letter-spacing: -0.36px;
+    text-align: center;
+    font: 600 18px/1 'SF Pro Display', -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  .status-icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .signal-icon {
+    width: 18px;
+    height: 11px;
+  }
+
+  .wifi-icon {
+    width: 18px;
+    height: 13px;
+  }
+
+  .battery-icon {
+    width: 27px;
+    height: 13px;
+  }
+
+  .navigation {
+    margin-top:10px;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: 700 18px Roboto, sans-serif;
+    color: #231f20;
+  }
+
+  .back-icon {
+    width: 11px;
+    height: 19px;
+  }
+
+  .login-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 155px;
+    margin-bottom: 40px;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 352px;
+  }
+
+  .email-input-wrapper {
+    margin-bottom: 54px;
+  }
+
+  .input-container {
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+    padding: 18px 16px;
+    border: 1px solid #333;
+    align-items: center;
+  }
+
+  .email-icon {
+    width: 16px;
+    height: 12px;
+  }
+
+  .email-input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font: 500 14px Inter, sans-serif;
+    color: #111;
+  }
+
+  .submit-button {
+    width: 100%;
+    border-radius: 50px;
+    background-color: #5e0dd3;
+    box-shadow: 0 10px 20px rgba(23, 30, 70, 0.2);
+    padding: 15px;
+    color: #fff;
+    font: 600 16px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: #333;
+  }
+
+  .divider-text {
+    font: 500 16px Inter, sans-serif;
+    color: #231f20;
+  }
+
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .google-button,
+  .facebook-button,
+  .apple-button {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(231, 228, 228, 0.4);
+    padding: 12px 20px;
+    border: 1px solid #b3b0b0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .google-icon,
+  .facebook-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .button-text {
+    font: 500 14px Inter, sans-serif;
+    color: #231f20;
+  }
+
+  .terms-footer {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .terms-text {
+    font: 600 12px Inter, sans-serif;
+    color: #555;
+  }
+
+  .regular-text {
+    font-weight: 400;
+  }
+
+  .bold-text {
+    font-weight: 500;
+    color: #333;
+  }

@@ -1,0 +1,148 @@
+/* Style for Swipeable Cards */
+.package-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.package-card.hidden {
+    display: none;
+}
+
+.swipe-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swipe-card {
+    flex: 0 0 80%;
+    margin: 0 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swipe-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.container {
+    padding: 20px;
+}
+
+.row.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.swipe-instruction {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.swipe-instruction img {
+    width: 30px;
+    margin-top: 10px;
+}
+.feature-card {
+    border-radius: 10px;
+    max-width: 299px;
+    font-family: Inter, sans-serif;
+  }
+
+  .feature-content {
+    border-radius: 10px;
+    background-color: #fff;
+    min-height: 529px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 26px 17px 25px;
+  }
+
+  .feature-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 108px;
+    object-fit: contain;
+  }
+
+  .plan-type {
+    margin-top: 16px;
+    font-size: 17px;
+    color: #00D084;
+    font-weight: 600;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 26px 0 0;
+    width: 100%;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 17px;
+    font-size: 13px;
+    color: #222;
+  }
+
+  .feature-icon {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+  }
+
+  .feature-description {
+    margin: 0;
+    flex: 1;
+  }
+
+  .continue-button {
+    margin-top: 57px;
+    width: 179px;
+    padding: 10px;
+    border-radius: 55px;
+    background-color: #5E0DD3;
+    box-shadow: 0 10px 20px rgba(23, 30, 70, 0.4);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .continue-button:hover {
+    background-color: #4c0aaa;
+  }
+
+  .continue-button:focus {
+    outline: 2px solid #5E0DD3;
+    outline-offset: 2px;
+  }
+
+  @media (forced-colors: active) {
+    .continue-button {
+      border: 2px solid currentColor;
+    }
+  }

@@ -1,0 +1,63 @@
+<main class="login-screen" role="main">
+
+
+    <nav class="navigation" role="navigation">
+      <button class="back-button" aria-label="Go back">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c1d18d5027b8b712609c1a56d06afaadc5e1806ae6a95d074a63a0f38f4b7dc?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603" alt="" class="back-icon" />
+        <span class="back-text">Start Using LinkMyte</span>
+      </button>
+    </nav>
+
+    <section class="login-section">
+      <img src="/assets/logo.png" alt="LinkMyte Logo" class="logo" />
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <div class="email-input-wrapper">
+          <label for="email" class="visually-hidden">Email</label>
+          <div class="input-container">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6e93222132ac341ef9bb9cd8eacecf31216258a7e943ac3bef5a17f456f5810?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603" alt="" class="email-icon" />
+            <input 
+              id="email"
+              type="email"
+              formControlName="email"
+              class="email-input"
+              placeholder="Email"
+              aria-label="Enter your email"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button" (click)="redirectToPage()">Continue</button>
+
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-text">OR</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <div class="social-login">
+          <button type="button" class="google-button" aria-label="Continue with Google">
+            <img src="/assets/google.png" alt="" class="google-icon" />
+            <span class="button-text">Continue with Google</span>
+          </button>
+
+          <button type="button" class="facebook-button" aria-label="Continue with Facebook">
+            <img src="/assets/facebook.png" alt="" class="facebook-icon" />
+            <span class="button-text">Continue with Facebook</span>
+          </button>
+
+          <button type="button" class="facebook-button" aria-label="Continue with Facebook">
+            <img src="/assets/apple.png" alt="" class="facebook-icon" />
+            <span class="button-text">Continue with Apple</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="terms-footer" role="contentinfo">
+      <p class="terms-text">
+        <span class="regular-text">By tapping Log In, you agree to our</span>
+        <span class="bold-text">Terms & Conditions, Privacy Policy</span>
+      </p>
+    </footer>
+  </main>

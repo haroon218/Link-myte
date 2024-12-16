@@ -1,0 +1,24 @@
+
+
+<body>
+    <div class="container" style="margin-top:30px;">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p class="text-muted">Resend code in <span style="color: #6200ea;">01:00</span></p>
+                <h3 class="fw-bold" style="margin-top: 100px;font-size: 20px;">Verify Your Login</h3>
+                <p class="text-muted">Please Enter The 4-Digit Code sent to your email address</p>
+                <div class="d-flex justify-content-center" style="margin-top: 40px;margin-bottom: 40px;">
+                    <input type="text" class="code-input" maxlength="1">
+                    <input type="text" class="code-input" maxlength="1">
+                    <input type="text" class="code-input" maxlength="1">
+                    <input type="text" class="code-input" maxlength="1">
+                </div>
+                <button class="btn btn-continue" style="height: 50px;" (click)="redirectToPage()">Continue</button>
+                <div class="resend-code">
+                    <i class="fas fa-sync-alt" style="color: grey;"></i>
+                    <span style="color: grey;">Resend code</span>
+                </div>
+                <p class="info-text" style="font-size: 14px;margin-top:25px;">You can make a maximum of three attempts to resend the code, or simply wait for <span style="color: #6200ea;">30:00</span> before trying again.</p>
+            </div>
+        </div>
+    </div>

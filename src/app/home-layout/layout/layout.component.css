@@ -1,0 +1,21 @@
+/* Ensure that body takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Content container for home */
+  app-home {
+    padding-bottom: 50px; /* To give space for footer */
+  }
+  
+  /* Footer */
+  app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  

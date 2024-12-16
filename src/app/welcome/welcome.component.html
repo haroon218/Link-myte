@@ -1,31 +1,112 @@
-
-  
-  <div class="container" style="margin-top: 55px;">
-   <div class="logo">
-    <img alt="LinkMyte Logo" height="50" src="https://storage.googleapis.com/a1aa/image/emnvKResXWjh0UshIPptpqx1GklkTqAXHDFWb6uyrk1HRb7TA.jpg" width="150"/>
-   </div>
-   <h2 style="margin-top: 100px;font-size: 20px;">
-    Welcome to LinkMyte
-   </h2>
-   <p style="font-size: 16px;color: grey;">
-    Choose your Language
-   </p>
-   <div class="language-option active">
-    <img alt="UK Flag" height="40" src="https://storage.googleapis.com/a1aa/image/ra1LrmintfzNWiEXnSytQjCbWwz6e8dX5pQdOL1XN9CIRb7TA.jpg" width="40"/>
-    <span>
-     English
-    </span>
-    <input checked="" class="form-check-input" id="english" name="language" type="radio"/>
-   </div>
-   <div class="language-option">
-    <img alt="Saudi Flag" height="40" src="https://storage.googleapis.com/a1aa/image/9vsd3lionC5CJJeFNQjfSSeN5A9ihxgmua2PcvSzlUzUi22nA.jpg" width="40"/>
-    <span>
-     عربي
-    </span>
-    <input class="form-check-input" id="arabic" name="language" type="radio"/>
-   </div>
-   <p>
-    Your language can be changed in the settings.
-   </p>
+<main *ngIf="isLoading" class="splash-container" role="main">
+  <img loading="lazy" src="/assets/logo.png" class="logo-image" alt="Company Logo" aria-label="Company Logo" />
+</main>
+<div *ngIf="!isLoading" class="container" style="margin-top: 55px; background-color:  #F1F1F1;height: 100vh;">
+  <div class="logo">
+    <img alt="LinkMyte Logo" height="50" src="/assets/logo.png" width="150" />
   </div>
+  <h2 style="margin-top: 100px;font-size: 20px;">
+    Welcome to LinkMyte
+  </h2>
+  <p style="font-size: 16px;color: grey;">
+    Choose your Language
+  </p>
+  <div class="language-option active">
+    <img alt="UK Flag" height="40"
+    src="/assets/england.png"
+    width="40" />
+    <span style="margin-left: 30px;">
+      English
+    </span>
+    <input  class="form-check-input" id="english" name="language" type="radio"
+      (click)="redirectToPage('english')" />
+  </div>
+  <div class="language-option">
+    <img alt="Saudi Flag" height="40"
+      src="/assets/saudia.png"
+      width="40" />
+    <span style="margin-left: 30px;">
+      عربي
+    </span>
+    <input class="form-check-input" id="arabic" name="language" type="radio" (click)="redirectToPage('english')" />
+  </div>
+  <p class="settings-note">
+    Your language can be changed in the settings.
+  </p>
+</div>
 
+<!-- <main *ngIf="isLoading" class="splash-container" role="main">
+    <img
+      loading="lazy"
+      src="/assets/logo.png"    class="logo-image"
+      alt="Company Logo"
+      aria-label="Company Logo"
+    />
+  </main>
+  <main class="language-selection-screen" role="main">
+    <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/967ec38e5064e7be4da5e0fae585a91dfa4a47c7642cc0f92ac1c278e4ae77cc?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+      class="company-logo"
+      alt="LinkMyte company logo"
+    />
+    <section class="content-container">
+      <div class="header-section">
+        <h1 class="welcome-title">Welcome to LinkMyte</h1>
+        <h2 class="language-prompt">Choose your Language</h2>
+      </div>
+      <div class="language-options">
+        <button 
+          class="language-option selected"
+          role="radio"
+          aria-checked="true"
+          tabindex="0"
+        >
+          <div class="language-info">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8566193a3e33d442e8b98cf9e4926d9630f3e6cd520622ba28e5f15fc6c5de0d?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+              class="flag-icon"
+              alt="English language flag"
+            />
+            <span class="language-name">English</span>
+          </div>
+          <div class="selection-indicator">
+            <img
+              loading="lazy"
+              src="/assets/saudia.png"
+                            class="check-icon"
+              alt=""
+            />
+          </div>
+        </button>
+        <button 
+          class="language-option"
+          role="radio"
+          aria-checked="false"
+          tabindex="0"
+        >
+          <div class="language-info">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/dd2b741effd3634d8ff2fb4a909106bb54c53fb628ba1598111d8e3f603d91c6?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+              class="flag-icon"
+              alt="Arabic language flag"
+            />
+            <span class="language-name">عربي</span>
+          </div>
+          <div class="selection-indicator">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7015714-6d2a-48a9-b6a4-0ce920051772?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+              class="check-icon"
+              alt=""
+            />
+          </div>
+        </button>
+      </div>
+      <p class="settings-note" role="note">
+        Your language can be changed in the settings.
+      </p>
+    </section>
+  </main> -->

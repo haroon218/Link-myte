@@ -1,0 +1,17 @@
+<nav class="navigation-container" role="navigation" aria-label="Main navigation">
+    <ul class="navigation-list">
+      <li *ngFor="let item of navigationItems" 
+          class="navigation-item" 
+          [class.active]="item.isActive"
+          role="menuitem"
+          tabindex="0">
+        <img
+          [src]="item.icon"
+          [alt]="item.label + ' icon'"
+          class="navigation-icon"
+          loading="lazy"
+        />
+        <span class="navigation-label">{{item.label}}</span>
+      </li>
+    </ul>
+  </nav>
