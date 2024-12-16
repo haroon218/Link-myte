@@ -152,6 +152,7 @@
     margin: auto 0;
     padding: 8px 6px 44px;
   }
+  
   .card-container {
     display: flex;
     flex-direction: column;
