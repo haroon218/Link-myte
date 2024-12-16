@@ -1,0 +1,175 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .edit-page {
+    background-color: rgba(241, 241, 241, 1);
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 16px 52px;
+  }
+
+  .status-bar {
+    display: flex;
+    width: 100%;
+    max-width: 328px;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+
+  .time {
+    color: #000;
+    letter-spacing: -0.36px;
+    font: 600 18px/1 SF Pro Display, -apple-system, Roboto, sans-serif;
+  }
+
+  .status-icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .signal-icon {
+    width: 18px;
+    aspect-ratio: 1.64;
+  }
+
+  .wifi-icon {
+    width: 18px;
+    aspect-ratio: 1.39;
+  }
+
+  .battery-icon {
+    width: 27px;
+    aspect-ratio: 2.08;
+  }
+
+  .navigation {
+    margin-top: 10px;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #231F20;
+    font: 700 18px Roboto, sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .back-icon {
+    width: 11px;
+    aspect-ratio: 0.58;
+  }
+
+  .card-editor {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section {
+    width: 350px;
+    max-width: 100%;
+  }
+
+  .image-container {
+    border-radius: 20px 20px 0 0;
+    background-color: #E6E6E6;
+    padding: 9px 18px;
+    position: relative;
+    min-height: 114px;
+  }
+
+  .edit-image-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .edit-images-text {
+    border-radius: 10px;
+    background-color: rgba(94, 13, 211, 0.1);
+    color: #5E0DD3;
+    padding: 8px 10px;
+    font: 500 10px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+
+  .profile-image {
+    width: 100px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -35px;
+    z-index: 10;
+  }
+
+  .card-form {
+    margin-top: 33px;
+    width: 100%;
+    max-width: 361px;
+    padding: 4px;
+  }
+
+  .form-input {
+    width: 100%;
+    border-radius: 5px;
+    min-height: 44px;
+    padding: 14px 10px;
+    border: 1px solid #333;
+    margin-top: 16px;
+    font: 500 14px Inter, sans-serif;
+    color: #333;
+  }
+
+  .form-input:first-child {
+    margin-top: 0;
+  }
+
+  .action-buttons {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .done-button {
+    width: 353px;
+    max-width: 100%;
+    border-radius: 50px;
+    background-color: #5E0DD3;
+    box-shadow: 0 10px 20px rgba(23, 30, 70, 0.2);
+    color: #FFF;
+    padding: 15px 10px;
+    font: 600 16px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-social-button {
+    width: 353px;
+    max-width: 100%;
+    border-radius: 50px;
+    background-color: #2C2C2C;
+    box-shadow: 0 4px 4px rgba(51, 51, 51, 0.12);
+    color: #FFF;
+    margin-top: 16px;
+    padding: 15px 10px;
+    font: 500 16px Inter, sans-serif;
+    border: none;
+    cursor: pointer;
+  }

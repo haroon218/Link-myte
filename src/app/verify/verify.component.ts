@@ -1,15 +1,17 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-verify',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './verify.component.html',
   styleUrl: './verify.component.css'
 })
 export class VerifyComponent {
   email: any;
+  isLoading:boolean=false
   otpValues: string[] = ['', '', '', ''];
   @ViewChildren('otp0, otp1, otp2, otp3') otpInputs!: QueryList<ElementRef>;
   timer: number = 60; // 60 seconds
@@ -95,18 +97,26 @@ export class VerifyComponent {
         email: this.email,
         code: otpCode,
       };
-
+this.isLoading=true
       // API call to verify the OTP
       this.authService.verifyCode(requestData).subscribe(
         (response) => {
           if(response.success){
+            this.isLoading=false
+
             this.router.navigate(['/packages']);
+
+          }
+          else{
+            this.isLoading=false
 
           }
           console.log('OTP Verified Successfully:', response);
           // Redirect after successful verification
         },
         (error) => {
+          this.isLoading=false
+
           console.error('OTP Verification Failed:', error);
           // Show error message or handle failure
         }

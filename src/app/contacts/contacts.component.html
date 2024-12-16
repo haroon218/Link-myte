@@ -1,0 +1,55 @@
+<div class="container mt-3"  style="background-color: #F1F1F1;">
+<section class="contacts-container" style="margin-top: 40px;" role="region" aria-label="Contact links">
+    <h2 class="contacts-title">Contacts</h2>
+    <div class="social-links">
+      <a 
+        href="#" 
+        class="social-link" 
+        aria-label="Visit our first social media profile"
+        tabindex="0"
+      >
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b398a23dc6a423e44a5b8e1241425a3d512568e43940dfc4c750be9ace095612?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+          class="social-icon"
+          alt=""
+        />
+      </a>
+      <a 
+        href="#" 
+        class="social-link"
+        aria-label="Visit our second social media profile"
+        tabindex="0"
+      >
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9dccb18a27c95d80787b7094c580ab34c7ec2f225fdb39436e443c411d5973e2?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+          class="social-icon"
+          alt=""
+        />
+      </a>
+    </div>
+  </section>
+<div *ngFor="let profile of profiles">
+    <article class="profile-container">
+      <div class="profile-info">
+        <img
+          loading="lazy"
+          [src]="profile.avatar"
+          class="profile-avatar"
+          [alt]="'Profile photo of ' + profile.name"
+        />
+        <div class="profile-details">
+          <h2 class="profile-name">{{ profile.name }}</h2>
+          <p class="profile-company">{{ profile.company }}</p>
+        </div>
+      </div>
+      <img
+        loading="lazy"
+        [src]="profile.logo"
+        class="company-logo"
+        [alt]="profile.company + ' company logo'"
+      />
+    </article>
+  </div>
+</div>

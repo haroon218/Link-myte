@@ -1,0 +1,41 @@
+<div class="container mt-3 "  style="background-color: #F1F1F1;">
+    <p class="subtitle">Settings</p>
+
+<nav class="settings-container"  role="navigation" aria-label="Settings menu">
+    <div class="search-container" role="search">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d833574d071b7f5de62858a5fe780b4bb29af97fae02227280a76f7669602fa1?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603" alt="Search icon" class="search-icon" />
+        <span class="search-text text-dark">Search</span>
+      </div>
+    <section 
+      *ngFor="let item of menuItems" 
+      class="menu-item" 
+      role="menuitem"
+      tabindex="0"
+      (keydown.enter)="handleItemSelect(item)"
+      (click)="handleItemSelect(item)">
+      <img
+        [src]="item.icon"
+        [alt]="item.altText"
+        class="menu-icon"
+        loading="lazy"
+      />
+      <div class="content-wrapper">
+        <h2 class="menu-title">{{item.title}}</h2>
+        <p class="menu-description">{{item.description}}</p>
+      </div>
+    </section>
+  </nav>
+  <button 
+  class="logout-container"
+  
+  role="button"
+  aria-label="Log out of your account">
+  <img
+    loading="lazy"
+    src="https://cdn.builder.io/api/v1/image/assets/TEMP/734a63db0dc61a1d398b4b839b220ca57c99a9ff544c68919dff703c378e0fae?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
+    class="logout-icon"
+    alt=""
+  />
+  <span class="logout-text">Log Out</span>
+</button>
+</div>

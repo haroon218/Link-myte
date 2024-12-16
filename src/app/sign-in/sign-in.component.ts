@@ -35,7 +35,9 @@ this.isLoading=true
       subscribe(
         (response: any) => {
           if(response.success){
+            debugger
             this.isLoading=false
+            localStorage.setItem('token',response.data.token)
             this.redirectToPage()
           }
         

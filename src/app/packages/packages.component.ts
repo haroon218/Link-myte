@@ -68,7 +68,7 @@ constructor(private router:Router){}
   //   this.resetPosition();
   // }
   onContinue(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['link-myte/home']);
 
   }
   redirectToPage() {

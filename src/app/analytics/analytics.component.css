@@ -1,0 +1,165 @@
+.analytics-container {
+    display: flex;
+    max-width: 353px;
+    flex-direction: column;
+    align-items: center;
+    font-family: Inter, sans-serif;
+  }
+
+  .chart-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .chart-image {
+    width: 200px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .metrics-legend {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 22px;
+    font-size: 12px;
+    color: rgb(17, 17, 17);
+    font-weight: 500;
+    justify-content: center;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+  }
+
+  .views-dot { background-color: rgb(167, 12, 212); }
+  .interactions-dot { background-color: rgb(43, 12, 212); }
+  .referrals-dot { background-color: rgb(212, 12, 94); }
+  .reviews-dot { background-color: rgb(12, 212, 167); }
+
+  .metrics-grid {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding: 23px 13px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 4px;
+    justify-content: center;
+  }
+
+  .metric-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 4px;
+    width: 68px;
+  }
+
+  .metric-value {
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .metric-label {
+    color: rgb(68, 68, 68);
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  .actions-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .action-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(51, 51, 51, 0.06);
+    padding: 13px 10px;
+    cursor: pointer;
+  }
+
+  .action-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .action-info {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .action-icon {
+    width: 28px;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .action-label {
+    color: rgba(17, 17, 17, 0.8);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .action-metric {
+    color: rgb(37, 37, 37);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .action-card:focus {
+    outline: 2px solid rgb(43, 12, 212);
+    outline-offset: 2px;
+  }
+
+  @media (forced-colors: active) {
+    .legend-dot {
+      border: 1px solid currentColor;
+    }
+  }
+  .header-section {
+    display: flex;
+    margin-top: 10px;
+    align-items: start;
+    gap: 16px;
+    font-family: Roboto, sans-serif;
+  }
+  .back-icon {
+    width: 11px;
+    height: 19px;
+    object-fit: contain;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    color: #231f20;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .subtitle {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
+  }

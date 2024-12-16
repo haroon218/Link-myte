@@ -1,0 +1,80 @@
+<main class="edit-page" role="main">
+   
+
+    <nav class="navigation" role="navigation">
+      <button class="back-button" aria-label="Go back">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c1d18d5027b8b712609c1a56d06afaadc5e1806ae6a95d074a63a0f38f4b7dc?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603" alt="" class="back-icon" />
+        <span>Add Card</span>
+      </button>
+    </nav>
+
+    <section class="card-editor" role="region" aria-label="Card editor">
+      <div class="image-section">
+        <div class="image-container">
+          <div class="edit-image-button">
+            <button class="edit-images-text" aria-label="Edit card images">Edit Images</button>
+          </div>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4360107e5ddcf6aa729872499855caff7595dad6d90eef1d4762c004805e9657?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603" alt="Profile avatar" class="profile-image" />
+        </div>
+      </div>
+
+      <form [formGroup]="cardForm" class="card-form" (ngSubmit)="onSubmit()">
+        <label for="cardTitle" class="visually-hidden">Card Title</label>
+        <input 
+          id="cardTitle"
+          type="text"
+          formControlName="cardTitle"
+          class="form-input"
+          placeholder="Card Title"
+          aria-label="Card Title"
+        />
+
+        <label for="name" class="visually-hidden">Name</label>
+        <input 
+          id="name"
+          type="text"
+          formControlName="name"
+          class="form-input"
+          placeholder="Name"
+          aria-label="Name"
+        />
+
+        <label for="company" class="visually-hidden">Company</label>
+        <input 
+          id="company"
+          type="text"
+          formControlName="company"
+          class="form-input"
+          placeholder="Company"
+          aria-label="Company"
+        />
+
+        <label for="job" class="visually-hidden">Job</label>
+        <input 
+          id="job"
+          type="text"
+          formControlName="job"
+          class="form-input"
+          placeholder="Job"
+          aria-label="Job"
+        />
+
+        <label for="phoneNumber" class="visually-hidden">Phone Number</label>
+        <input 
+          id="phoneNumber"
+          type="tel"
+          formControlName="phoneNumber"
+          class="form-input"
+          placeholder="Phone Number"
+          aria-label="Phone Number"
+        />
+      </form>
+    </section>
+
+    <footer class="action-buttons">
+      <button class="done-button" (click)="onSubmit()" aria-label="Save changes">Done</button>
+      <button class="add-social-button" aria-label="Add social media account" routerLink="/link-myte/social-accounts">
+        Add Social Media Account
+      </button>
+    </footer>
+  </main>

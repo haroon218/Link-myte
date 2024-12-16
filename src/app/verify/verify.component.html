@@ -14,12 +14,19 @@
                     <input type="text" class="code-input" maxlength="1" (input)="onInput($event, 3)" (keydown)="onKeyDown($event, 3)" #otp3>
                   </div>
                   <button 
-                    class="btn btn-continue" 
-                    style="height: 50px;" 
-                    [disabled]="!isOtpComplete()" 
-                    (click)="redirectToPage()">
+                  class="btn btn-continue" 
+                  style="height: 50px; display: flex; align-items: center; justify-content: center;" 
+                  [disabled]="!isOtpComplete() " 
+                  (click)="redirectToPage()">
+                  <ng-container *ngIf="isLoading">
+                    <div *ngIf="isLoading" class="loader"></div>
+                  </ng-container>
+                  <ng-container *ngIf="!isLoading">
                     {{ isOtpComplete() ? 'Login' : 'Continue' }}
-                  </button>
+                  </ng-container>
+                </button>
+                
+                  
                   
                   
                 <div class="resend-code">
