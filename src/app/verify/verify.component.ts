@@ -93,7 +93,7 @@ export class VerifyComponent {
       const otpCode = this.otpValues.join(''); // Get the OTP code
       const requestData = {
         email: this.email,
-        otp: otpCode,
+        code: otpCode,
       };
 
       // API call to verify the OTP
