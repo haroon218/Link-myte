@@ -1,0 +1,33 @@
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    text-align: center;
+}
+.logo {
+    margin-bottom: 20px;
+}
+.language-option {
+    border: 2px solid #d1d1d1;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.language-option img {
+    width: 40px;
+    height: 40px;
+}
+.language-option.active {
+    border-color: #7b2ff7;
+}
+.language-option .form-check-input {
+    margin-left: auto;
+}
