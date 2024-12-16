@@ -24,10 +24,19 @@
               placeholder="Email"
               aria-label="Enter your email"
             />
+           
+          </div>
+          <div *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid" class="error-message">
+            <span *ngIf="loginForm.controls['email'].errors?.['required']">Email is required.</span>
+            <span *ngIf="loginForm.controls['email'].errors?.['email']">Please enter a valid email.</span>
           </div>
         </div>
-
-        <button type="submit" class="submit-button" (click)="redirectToPage()">Continue</button>
+        <button type="submit" class="submit-button" [disabled]="isLoading">
+            <div *ngIf="!isLoading">Continue</div>
+          
+              <div *ngIf="isLoading" class="loader"></div>
+          </button>
+          
 
         <div class="divider">
           <span class="divider-line"></span>

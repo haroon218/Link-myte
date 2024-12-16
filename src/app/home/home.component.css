@@ -199,7 +199,6 @@
     font-weight: 600;
   }
   .profile-badge {
-    align-self: stretch;
     border-radius: 28px;
     background-color: rgba(48, 198, 198, 1);
     margin-top: 59px;
@@ -207,8 +206,9 @@
     width: 91px;
     font-size: 12px;
     color: rgba(255, 255, 255, 1);
-    font-weight: 500;
+    font-weight: 500;   
     white-space: nowrap;
+    text-align: center;
     padding: 7px 10px;
   }
   .profile-stats {
