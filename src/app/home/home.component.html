@@ -14,13 +14,13 @@
         </section>
     </article>
     <div class="profile-wrapper">
-        <article class="profile-content">
+        <article class="profile-content" *ngFor="let data of cards">
             <div class="card-container">
                 <div class="card-wrapper">
                     <div class="card">
                         <div class="profile-details">
                             <div class="avatar" role="img" aria-label="Profile avatar"></div>
-                            <h1 class="profile-name">Ayantoye David</h1>
+                            <h1 class="profile-name">{{data.first_name}}</h1>
                             <span class="profile-badge" role="status">Event</span>
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/a12a79459221869d9e535f805f7360176ae057b1e8d1c459ced3088af19e33ec?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"

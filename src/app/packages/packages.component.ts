@@ -1,6 +1,7 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 interface FeatureItem {
   icon: string;
   description: string;
@@ -40,7 +41,7 @@ export class PackagesComponent {
   startX: number = 0;
   moveX: number = 0;
   threshold: number = 100; // The distance to trigger a swipe action
-constructor(private router:Router){}
+constructor(private router:Router,private authService:AuthService){}
   onTouchStart(event: TouchEvent) {
     this.startX = event.touches[0].clientX;
   }
@@ -67,10 +68,25 @@ constructor(private router:Router){}
   //   }
   //   this.resetPosition();
   // }
-  onContinue(){
-    this.router.navigate(['link-myte/home']);
-
+  onContinue(): void {
+    const requestData = {
+      // Add the required data for your API call
+     package_id: "1"
+    };
+  
+    this.authService.activePackage(requestData).subscribe(
+      (response) => {
+        console.log('API Response:', response);
+        // Handle the API response if needed
+        this.router.navigate(['link-myte/home']); // Navigate after successful API call
+      },
+      (error) => {
+        console.error('API Error:', error);
+        // Handle error case if needed
+      }
+    );
   }
+  
   redirectToPage() {
    
     // Redirect to English route

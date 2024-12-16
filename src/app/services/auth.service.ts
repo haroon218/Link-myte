@@ -19,4 +19,19 @@ export class AuthService {
       return this.http.post<any>(`${Constants.baseApi}/verify-code`,loginCredentials)
     
       }
+      public checkPackage(){
+   
+        return this.http.get<any>(`${Constants.baseApi}/active-package-detials`,)
+      
+        }
+        public activePackage(payload:any){
+   
+          return this.http.get<any>(`${Constants.baseApi}/active-package`,payload)
+        
+          }
+          public getcardListing(){
+   
+            return this.http.get<any>(`${Constants.baseApi}/cards-listing`)
+          
+            }
   }

@@ -97,33 +97,43 @@ export class VerifyComponent {
         email: this.email,
         code: otpCode,
       };
-this.isLoading=true
+      this.isLoading = true;
+  
       // API call to verify the OTP
       this.authService.verifyCode(requestData).subscribe(
         (response) => {
-          if(response.success){
-            this.isLoading=false
-
-            this.router.navigate(['/packages']);
-
-          }
-          else{
-            this.isLoading=false
-
+          if (response.success) {
+            this.checkPackage(); // Call checkPackage to decide navigation
+          } else {
+            this.isLoading = false;
           }
           console.log('OTP Verified Successfully:', response);
-          // Redirect after successful verification
         },
         (error) => {
-          this.isLoading=false
-
+          this.isLoading = false;
           console.error('OTP Verification Failed:', error);
-          // Show error message or handle failure
         }
       );
     }
   }
-
+  
+  checkPackage(): void {
+    this.authService.checkPackage().subscribe({
+      next: (data) => {
+        this.isLoading = false;
+        if (data) { // If there is any data returned
+          this.router.navigate(['/link-myte/home']); // Navigate to home
+        } else {
+          this.router.navigate(['/packages']); // Navigate to packages otherwise
+        }
+      },
+      error: (error) => {
+        this.isLoading = false;
+        console.error('Error checking package:', error);
+      },
+    });
+  }
+  
   // Redirect to another page
   redirectToPage(): void {
     this.verifyOtp(); // Call verify OTP function when redirecting
