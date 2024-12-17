@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import QRCode from 'qrcode';
 import { AuthService } from '../services/auth.service';
 import { CommonModule, Location } from '@angular/common';
 
