@@ -19,21 +19,21 @@
       </div>
 
       <form [formGroup]="cardForm" class="card-form" (ngSubmit)="onSubmit()">
-        <label for="cardTitle" class="visually-hidden">Card Title</label>
+        <!-- <label for="cardTitle" class="visually-hidden">Card Title</label>
         <input 
           id="cardTitle"
           type="text"
-          formControlName="cardTitle"
+          formControlName="first_name"
           class="form-input"
           placeholder="Card Title"
           aria-label="Card Title"
-        />
+        /> -->
 
         <label for="name" class="visually-hidden">Name</label>
         <input 
           id="name"
           type="text"
-          formControlName="name"
+          formControlName="first_name"
           class="form-input"
           placeholder="Name"
           aria-label="Name"
@@ -53,7 +53,7 @@
         <input 
           id="job"
           type="text"
-          formControlName="job"
+          formControlName="job_title"
           class="form-input"
           placeholder="Job"
           aria-label="Job"
@@ -63,9 +63,18 @@
         <input 
           id="phoneNumber"
           type="tel"
-          formControlName="phoneNumber"
+          formControlName="mobile"
           class="form-input"
           placeholder="Phone Number"
+          aria-label="Phone Number"
+        />
+        <label for="phoneNumber" class="visually-hidden">Whatsapp Number</label>
+        <input 
+          id="phoneNumber"
+          type="tel"
+          formControlName="whatsup_number"
+          class="form-input"
+          placeholder="Whatsapp Number"
           aria-label="Phone Number"
         />
       </form>

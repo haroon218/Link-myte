@@ -16,7 +16,6 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default child route
       { path: 'home', component: HomeComponent },
-      { path: 'new-card', component: AddNewCardComponent },
       { path: 'social-accounts', component: SocialMediaAccountComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'analytics', component: AnalyticsComponent },
@@ -24,7 +23,7 @@ const routes: Routes = [
       {path:'scanner',component:ScannerComponent},
       // Example of child route
       // Example of child route
-      // Example of child route
+    
     ],
   },
 ];

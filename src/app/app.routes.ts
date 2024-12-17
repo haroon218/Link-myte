@@ -15,6 +15,7 @@ export const routes: Routes = [
     {path:'sign-in',component:SignInComponent},
     {path:'verify',component:VerifyComponent},
     {path:'packages',component:PackagesComponent},
+    { path:'new-card', component: AddNewCardComponent },
 
     
     {

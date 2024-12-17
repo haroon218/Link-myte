@@ -11,7 +11,7 @@
   <p style="font-size: 16px;color: grey;">
     Choose your Language
   </p>
-  <div class="language-option active">
+  <div class="language-option active"  (click)="redirectToPage('english')">
     <img alt="UK Flag" height="40"
     src="/assets/england.png"
     width="40" />
@@ -19,9 +19,9 @@
       English
     </span>
     <input  class="form-check-input" id="english" name="language" type="radio"
-      (click)="redirectToPage('english')" />
+      />
   </div>
-  <div class="language-option">
+  <!-- <div class="language-option">
     <img alt="Saudi Flag" height="40"
       src="/assets/saudia.png"
       width="40" />
@@ -29,7 +29,7 @@
       عربي
     </span>
     <input class="form-check-input" id="arabic" name="language" type="radio" (click)="redirectToPage('english')" />
-  </div>
+  </div> -->
   <p class="settings-note">
     Your language can be changed in the settings.
   </p>

@@ -19,6 +19,11 @@ export class AuthService {
       return this.http.post<any>(`${Constants.baseApi}/verify-code`,loginCredentials)
     
       }
+      public createCard(loginCredentials:any){
+   
+        return this.http.post<any>(`${Constants.baseApi}/card-detial-store`,loginCredentials)
+      
+        }
       public checkPackage(){
    
         return this.http.get<any>(`${Constants.baseApi}/active-package-detials`,)
