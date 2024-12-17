@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { CommonModule } from '@angular/common';
-import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @Component({
   selector: 'app-home',
