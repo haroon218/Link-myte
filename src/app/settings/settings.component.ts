@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -34,9 +36,24 @@ export class SettingsComponent {
       altText: "Language settings icon"
     }
   ];
+constructor(private authService:AuthService,private router:Router){
 
+}
   handleItemSelect(item: any): void {
     // Handle menu item selection
   }
-
+  logout() {
+    this.authService.logout().subscribe({
+      next: (response) => {
+        console.log('Logout successful:', response);
+        sessionStorage.clear(); // Clear session data if needed
+        localStorage.clear();   // Clear local storage if needed
+        this.router.navigate(['']); // Redirect to login page
+      },
+      error: (error) => {
+        console.error('Logout error:', error);
+        alert('Logout failed. Try again later.');
+      },
+    });
+}
 }

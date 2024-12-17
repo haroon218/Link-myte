@@ -24,6 +24,9 @@ export class AuthService {
         return this.http.post<any>(`${Constants.baseApi}/card-detial-store`,loginCredentials)
       
         }
+        public logout() {
+          return this.http.post<any>(`${Constants.baseApi}/logout`, {}); // Passing an empty object as body
+        }
       public checkPackage(){
    
         return this.http.get<any>(`${Constants.baseApi}/active-package-detials`,)

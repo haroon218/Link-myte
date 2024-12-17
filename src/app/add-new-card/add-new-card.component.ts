@@ -16,7 +16,7 @@ export class AddNewCardComponent {
     this.cardForm = this.fb.group({
       job_title: ['', Validators.required],
       first_name: ['', Validators.required],
-      company: ['', Validators.required],
+      // company: ['', Validators.required],
       mobile: ['', Validators.required],
       whatsup_number: ['', [Validators.required]]
     });
