@@ -24,7 +24,7 @@ getCards(): void {
       debugger
       // Loop through cards and generate a QR code for each one
       this.cards =data.data.data;
-       this.generateQrCode(this.cards[0].short_code)
+      //  this.generateQrCode(this.cards[0].short_code)
      
     },
     error: (error) => {
