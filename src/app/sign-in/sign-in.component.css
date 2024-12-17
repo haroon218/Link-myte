@@ -127,7 +127,24 @@
     font: 500 14px Inter, sans-serif;
     color: #111;
   }
-
+  .splash-container {
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    /* max-width: 480px; */
+    width: 100%;
+height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-image {
+    aspect-ratio: 3.98;
+    object-fit: contain;
+    object-position: center;
+    width: 207px;
+    max-width: 100%;
+  }
   .submit-button {
     width: 100%;
     border-radius: 50px;

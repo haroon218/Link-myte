@@ -1,14 +1,17 @@
+<main *ngIf="isLoadingt" class="splash-container" role="main">
+  <img loading="lazy" src="/assets/logo.png" class="logo-image" alt="Company Logo" aria-label="Company Logo" />
+</main>
 <main class="login-screen" role="main">
 
 
-    <nav class="navigation" role="navigation">
+    <nav *ngIf="!isLoadingt" class="navigation" role="navigation">
       <button class="back-button" aria-label="Go back">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c1d18d5027b8b712609c1a56d06afaadc5e1806ae6a95d074a63a0f38f4b7dc?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603" alt="" class="back-icon" />
         <span class="back-text">Start Using LinkMyte</span>
       </button>
     </nav>
 
-    <section class="login-section">
+    <section *ngIf="!isLoadingt" class="login-section">
       <img src="/assets/logo.png" alt="LinkMyte Logo" class="logo" />
       
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
@@ -38,13 +41,13 @@
           </button>
           
 
-        <div class="divider">
+        <div *ngIf="!isLoadingt" class="divider">
           <span class="divider-line"></span>
           <span class="divider-text">OR</span>
           <span class="divider-line"></span>
         </div>
 
-        <div class="social-login">
+        <div *ngIf="!isLoadingt" class="social-login">
           <button type="button" class="google-button" aria-label="Continue with Google">
             <img src="/assets/google.png" alt="" class="google-icon" />
             <span class="button-text">Continue with Google</span>
@@ -63,7 +66,7 @@
       </form>
     </section>
 
-    <footer class="terms-footer" role="contentinfo">
+    <footer *ngIf="!isLoadingt" class="terms-footer" role="contentinfo">
       <p class="terms-text">
         <span class="regular-text">By tapping Log In, you agree to our</span>
         <span class="bold-text">Terms & Conditions, Privacy Policy</span>

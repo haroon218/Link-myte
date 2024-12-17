@@ -11,8 +11,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { ScannerComponent } from './scanner/scanner.component';
 
 export const routes: Routes = [
-    {path:'',component:WelcomeComponent},
-    {path:'sign-in',component:SignInComponent},
+    {path:'',component:SignInComponent},
+    // {path:'sign-in',component:SignInComponent},
     {path:'verify',component:VerifyComponent},
     {path:'packages',component:PackagesComponent},
     { path:'new-card', component: AddNewCardComponent },

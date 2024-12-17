@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
   styleUrl: './sign-in.component.css'
 })
 export class SignInComponent {
-  
+  isLoadingt: boolean = true;
   loginForm: FormGroup;
   isLoading = false;
   constructor(private fb: FormBuilder,private router:Router,private authService:AuthService) {
@@ -19,7 +19,11 @@ export class SignInComponent {
       email: ['', [Validators.required, Validators.email]]
     });
   }
-
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoadingt = false;
+    }, 2000); // Show the loading screen for 2 seconds
+  }
   onSubmit() {
     if (this.loginForm.invalid) {
     this.loginForm.markAllAsTouched()
