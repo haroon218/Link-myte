@@ -1,22 +1,23 @@
-<nav class="navigation-container" role="navigation" aria-label="Main navigation">
-    <ul class="navigation-list">
-      <li 
-        *ngFor="let item of navigationItems" 
-        class="navigation-item" 
-        [class.active]="item.isActive"
-        role="menuitem"
-        tabindex="0"
-        [routerLink]="item.routerLink || ''" 
-        routerLinkActive="active" 
-      >
-        <img
-          [src]="item.icon"
-          [alt]="item.label + ' icon'"
-          class="navigation-icon"
-          loading="lazy"
-        />
-        <span class="navigation-label">{{ item.label }}</span>
-      </li>
-    </ul>
-  </nav>
-  
+<!-- Footer with QR Code Icon -->
+<footer class="footer-container">
+  <ul class="navigation-list">
+    <!-- Other Navigation Items -->
+    <li *ngFor="let item of navigationItems" class="navigation-item">
+      <img [src]="item.icon" [alt]="item.label + ' icon'" class="navigation-icon" />
+      <span class="navigation-label">{{ item.label }}</span>
+    </li>
+
+    <!-- QR Code Icon -->
+    <li class="navigation-item">
+      <button (click)="toggleScanner()" aria-label="Scan QR Code" class="qr-icon-button" routerLink="/link-myte/scanner">
+        <img src="assets/qr-icon.png" alt="QR Scanner Icon" class="qr-icon" />
+      </button>
+    </li>
+  </ul>
+</footer>
+
+<!-- QR Scanner Component -->
+<!-- <div *ngIf="showScanner" class="scanner-overlay">
+  <app-scanner (scanSuccess)="handleQrCodeResult($event)"></app-scanner>
+  <button (click)="toggleScanner()" class="close-button">Close</button>
+</div> -->

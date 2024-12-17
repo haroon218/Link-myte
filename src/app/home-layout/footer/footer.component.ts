@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ScannerComponent } from '../../scanner/scanner.component';
 
 @Component({
   selector: 'app-footer',
@@ -35,4 +36,15 @@ export class FooterComponent {
       routerLink: "/link-myte/settings", // Router link for Settings
     }
   ];
+  showScanner: boolean = false;
+
+  toggleScanner() {
+    this.showScanner = !this.showScanner;
+  }
+
+  handleQrCodeResult(result: any): void {
+    console.log('Scanned QR Code:', result);
+    alert(`QR Code Scanned: ${result}`);
+    this.showScanner = false; // Close scanner after success
+  }
 }

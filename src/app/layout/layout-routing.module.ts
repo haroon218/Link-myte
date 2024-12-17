@@ -7,6 +7,7 @@ import { HomeComponent } from '../home/home.component';
 import { SettingsComponent } from '../settings/settings.component';
 import { AnalyticsComponent } from '../analytics/analytics.component';
 import { ContactsComponent } from '../contacts/contacts.component';
+import { ScannerComponent } from '../scanner/scanner.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,9 @@ const routes: Routes = [
       { path: 'social-accounts', component: SocialMediaAccountComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'analytics', component: AnalyticsComponent },
-      { path: 'contacts', component: ContactsComponent }, // Example of child route
+      { path: 'contacts', component: ContactsComponent },
+      {path:'scanner',component:ScannerComponent},
+      // Example of child route
       // Example of child route
       // Example of child route
     ],
