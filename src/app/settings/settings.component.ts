@@ -49,6 +49,9 @@ constructor(private authService:AuthService,private router:Router){
         localStorage.clear(); 
         localStorage.clear();   
         this.router.navigate(['']); 
+
+
+        
       },
       error: (error) => {
         console.error('Logout error:', error);
