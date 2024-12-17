@@ -1,5 +1,5 @@
 export const Constants = {
-    //  baseApi:'https://localhost:44326'
-     baseApi:'https://linkmyte.com/api/customer'
+     baseApi:'https://linkmyte.ai/api/customer',
+     fakeApi:'https://linkmyte.ai'
     
 }

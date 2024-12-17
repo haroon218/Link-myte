@@ -1,18 +1,27 @@
 <div class="container mt-3 " style="background-color: #F1F1F1;">
-    <article class="user-card" role="article" style="margin-top: 20px;margin-bottom: 10px;">
+    <article class="user-card" *ngFor="let card of cards" role="article" style="margin-top: 20px;margin-bottom: 10px;">
         <section class="user-info">
-            <div class="user-details">
-                <h2 class="user-name">Ayantoye David</h2>
-                <p class="card-status">Free Cards</p>
-                <p class="card-count">1/3 Cards</p>
-            </div>
+          <div class="user-details">
+            <h2 class="user-name">Ayantoye David</h2>
+            <p class="card-status">Free Cards</p>
+            <p class="card-count">1/3 Cards</p>
+          </div>
         </section>
-        <section class="avatar-container">
-            <img loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0f7d5e0ffc0bc3cd81ff85e2ef95aede3ed8028981c3f85933e50ab20d91d78?placeholderIfAbsent=true&apiKey=b81512dc83464a56bbea3c6885bcf603"
-                class="avatar-image" alt="Profile avatar for Ayantoye David" />
+        <section class="avatar-container" (click)="openModal(card.short_code)">
+          <!-- QR Code image with click event -->
+          <img [src]="qrCode" class="avatar-image"  />
         </section>
-    </article>
+      </article>
+      
+      <!-- Modal to display the enlarged QR Code -->
+      <div  class="modal" (click)="closeModal()" style="width: 100%;background-color: black;">
+        <div style="height: 100vh;" (click)="$event.stopPropagation()"> <!-- Prevent click from closing the modal -->
+          <img [src]="selectedQrCode" class="modal-image" />
+        </div>
+      </div>
+      
+      
+    
     <div class="profile-wrapper">
         <article class="profile-content" *ngFor="let data of cards">
             <div class="card-container">

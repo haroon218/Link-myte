@@ -8,6 +8,7 @@ import { SettingsComponent } from '../settings/settings.component';
 import { AnalyticsComponent } from '../analytics/analytics.component';
 import { ContactsComponent } from '../contacts/contacts.component';
 import { ScannerComponent } from '../scanner/scanner.component';
+import { QrCodeViewerComponent } from '../qr-code-viewer/qr-code-viewer.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,8 @@ const routes: Routes = [
       { path: 'analytics', component: AnalyticsComponent },
       { path: 'contacts', component: ContactsComponent },
       {path:'scanner',component:ScannerComponent},
+      {path:'qrcode',component:QrCodeViewerComponent},
+
       // Example of child route
       // Example of child route
     

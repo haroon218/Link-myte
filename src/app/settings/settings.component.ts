@@ -46,9 +46,9 @@ constructor(private authService:AuthService,private router:Router){
     this.authService.logout().subscribe({
       next: (response) => {
         console.log('Logout successful:', response);
-        sessionStorage.clear(); // Clear session data if needed
-        localStorage.clear();   // Clear local storage if needed
-        this.router.navigate(['']); // Redirect to login page
+        localStorage.clear(); 
+        localStorage.clear();   
+        this.router.navigate(['']); 
       },
       error: (error) => {
         console.error('Logout error:', error);
